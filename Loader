@@ -1,4 +1,4 @@
---Script Loader based on what game, theres currently only 1 script yet.
+--THIS SCRIPT IS MADE BY RXZTENT#5168 AND UPLOADED ON SCRIPTBLOX BY "rxztent" ANY OTHER UPLOADS ARE REPOSTS.
 if game.PlaceId == 8438158667 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
 end
