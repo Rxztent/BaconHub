@@ -1,0 +1,4 @@
+--Script Loader based on what game, theres currently only 1 script yet.
+if game.PlaceId == 8438158667 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
+end
