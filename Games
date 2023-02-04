@@ -1,0 +1,10 @@
+--THIS SCRIPT IS MADE BY RXZTENT#5168 AND UPLOADED ON SCRIPTBLOX BY "rxztent" ANY OTHER UPLOADS ARE REPOSTS.
+if game.PlaceId == 8438158667 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
+end;
+if game.PlaceId == 1242235469 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/1242235469", true))()
+end;
+if game.PlaceId == 5815351317 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/5815351317", true))()
+end;
