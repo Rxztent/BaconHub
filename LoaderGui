@@ -1,0 +1,12 @@
+if game.PlaceId == 8438158667 then
+    script.parent.text = "Slide House Tumble"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
+end;
+if game.PlaceId == 1242235469 then
+      script.parent.text = "ball and axe"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/1242235469", true))()
+end;
+if game.PlaceId == 5815351317 then
+      script.parent.text = "Marble Chaos!"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/5815351317", true))()
+end;
