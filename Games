@@ -1,4 +1,4 @@
---THIS SCRIPT IS MADE BY RXZTENT#5168 AND UPLOADED ON SCRIPTBLOX BY "rxztent" ANY OTHER UPLOADS ARE REPOSTS.
+--script wont get updates due to me getting banned scriptblox, so fuck scriptblox.
 if game.PlaceId == 8438158667 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/ClientLoader", true))()
