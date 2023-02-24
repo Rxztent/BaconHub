@@ -1,4 +1,4 @@
---Update! i found my script on rbxscript meaning, I will continue on the script.
+--Re-uploaded
 if game.PlaceId == 8438158667 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/ClientLoader", true))()
