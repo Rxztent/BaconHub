@@ -1,4 +1,4 @@
---script wont get updates due to me getting banned scriptblox, so fuck scriptblox.
+--Update! i found my script on rbxscript meaning, I will continue on the script.
 if game.PlaceId == 8438158667 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/8438158667", true))()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/Rxztent/BaconHub/main/ClientLoader", true))()
