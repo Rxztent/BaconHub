@@ -39,7 +39,7 @@ if not getgenv().settin then
          ['Webhook'] = "https://discord.com/api/webhooks/1116667387131985992/FlW4uFvpV8Nck1XUL1VBFHuhpHgMhKI8ozpWFD-kOI5MEC9dKimeBZLpIoSliLoo4A3",
       },
       ['ServerHopDelay'] = 8, -- minutes, resets every donation
-      ['MinimumWithdrawAmount'] = 50, -- fake withdraw amount
+      ['MinimumWithdrawAmount'] = 100, -- fake withdraw amount
       ['Beg'] = {
          ['Delay'] = 60,
          ['Messages'] = {
