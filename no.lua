@@ -59,11 +59,11 @@ local text = [[
 local plrs = {}
 
 for i, v in next, Players:GetPlayers() do
-	v:SetAttribute('Donated', 0)
+	v:SetAttribute('Donated', 5)
 end
 
 Players.PlayerAdded:Connect(function(player)
-	player:SetAttribute('Donated', 0)
+	player:SetAttribute('Donated', 5)
 end)
 
 function serverHop()
@@ -344,7 +344,7 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 		plrChatted:SetAttribute('Donated', newBalance)		
 	end
     if message == '.help' then
-        chat('.help | .withdraw | .bet amount | .balance || Amount of bux you donate will be sent to your balance.')
+        chat('.help | .withdraw | .bet amount | .balance || Amount of bux you donate will be sent to your balance. || You have 5 starting bux')
     end
     if message == '.withdraw' then
         if plrChatted:GetAttribute('Donated') < getgenv().settin.MinimumWithdrawAmount then
