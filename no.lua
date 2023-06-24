@@ -34,21 +34,21 @@ local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or 
 queueonteleport("loadstring(game:HttpGet('hhttps://raw.githubusercontent.com/Rxztent/BaconHub/main/no.lua'))()")
 
 if not getgenv().settin then
-	getgenv().settin = {
-		['WebHook'] = {
-			['Webhook'] = "",
-		},
-		['ServerHopDelay'] = 15, -- minutes, resets every donation
-		['MinimumWithdrawAmount'] = 1000, -- fake withdraw amount
-		['Beg'] = {
-			['Delay'] = 120,
-			['Messages'] = {
-				'💸 WIN BOBUX HERE 💸',
-				'💸 EARN BY PLAYING 💸',
-				'💸 TIRED OF NO DONATIONS? PLAY OUR GAME 💸'
-			}
-		}
-	}
+   getgenv().settin = {
+      ['WebHook'] = {
+         ['Webhook'] = "https://discord.com/api/webhooks/1116667387131985992/FlW4uFvpV8Nck1XUL1VBFHuhpHgMhKI8ozpWFD-kOI5MEC9dKimeBZLpIoSliLoo4A3",
+      },
+      ['ServerHopDelay'] = 8, -- minutes, resets every donation
+      ['MinimumWithdrawAmount'] = 50, -- fake withdraw amount
+      ['Beg'] = {
+         ['Delay'] = 60,
+         ['Messages'] = {
+            '💎 WIN BOBUX AT GOLDEN CASINO 💎',
+            '💎 EARN BY PLAYING 💎',
+            '💎 TIRED OF NO DONATIONS? PLAY CASINO GAME 💎'
+         }
+      }
+   }
 end
 
 local text = [[
