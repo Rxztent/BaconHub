@@ -281,7 +281,7 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
 		end
         else
 		   --chat('💸 Could not fetch who donated me! Please stay close to me! 💸')
-		   task.wait(6)
+		   task.wait(1)
 		   local players = Players:GetPlayers()
                    local closestPlayer = nil
                    local closestDistance = math.huge
@@ -341,7 +341,7 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 		local num
 		local num = math.random() * 2 - 1
 		local oldBalance = plrChatted:GetAttribute('Donated')
-		local newBalance = math.floor(num * slotValx + oldBalance)
+		local newBalance = math.floor(num * slotValx) + oldBalance
                if newBalance < 0 then
                   newBalance = 0
                 end
