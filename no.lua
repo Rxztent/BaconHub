@@ -70,7 +70,7 @@ game.Players.PlayerAdded:Connect(function(player)
     player:SetAttribute("Donated", 0)
     if player.Name == "Yourrichbacon" then
         player:SetAttribute("Donated", 250)
-        chat("💸 Hello, Yourrichbacon! Your payment has been accepted in our system. Your new balance is 250 Bobux. 💸 Please report any errors to rxztent")
+        chat("💸 Hello, Yourrichbacon! Your Robux has been withdrawn from our system and has arrived in your account. 💸")
     end
 end)
 
