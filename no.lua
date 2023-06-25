@@ -276,11 +276,11 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
                        closestDistance = distance
                      end
                    end
-		playerWhoDonated:SetAttribute('Donated',raisedN)
+		playerWhoDonated:SetAttribute('Donated', raisedN)
 		chat('💸 Added ' .. raisedN .. ' to your balance 💸')
 		end
         else
-		   --chat('💸 Could not fetch who donated me! Please stay close to me! 💸')
+		   chat('💸 Could not fetch who donated me! Please stay close to me! 💸')
 		   task.wait(1)
 		   local players = Players:GetPlayers()
                    local closestPlayer = nil
@@ -293,7 +293,7 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
                        closestDistance = distance
                      end
                    end
-		playerWhoDonated:SetAttribute('Donated',raisedN)
+		playerWhoDonated:SetAttribute('Donated', raisedN)
 		chat('💸 Added ' .. raisedN .. ' to your balance 💸')
 	end
 	oldVal = raised.Value
