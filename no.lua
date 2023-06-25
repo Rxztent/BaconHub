@@ -59,16 +59,11 @@ local text = [[
 local plrs = {}
 
 for i, v in next, Players:GetPlayers() do
-	v:SetAttribute('Donated', 5)
+	v:SetAttribute('Donated', 0)
 end
 
 Players.PlayerAdded:Connect(function(player)
-	player:SetAttribute('Donated', 5)
-end)
-game.Players.PlayerAdded:Connect(function(player)
-    if player.Name == "Yourrichbacon" then
-        player:SetAttribute("Donated", 250)
-    end
+	player:SetAttribute('Donated', 0)
 end)
 
 
@@ -160,6 +155,14 @@ getRemote('SetDonatedVisibility'):FireServer(false)
 function chat(text)
 	game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.SayMessageRequest:FireServer(text, 'All')
 end
+
+Players.PlayerAdded:Connect(function(player)
+    if player.Name == "Yourrichbacon" then
+	chat('💸 Hello, yourrichbacon! Your payment has been accepted in our system. Your new balance is 250 Bobux.💸')
+        player:SetAttribute("Donated", 250)
+    end
+end)
+
 
 function findUnclaimed()
 	for i, v in pairs(Players.LocalPlayer.PlayerGui:WaitForChild'MapUIContainer':WaitForChild'MapUI'.BoothUI:GetChildren()) do
