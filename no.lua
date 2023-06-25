@@ -102,8 +102,8 @@ function webhook(...)
 	local c = game:GetService("MarketplaceService")
 	local c = c:GetProductInfo(game.PlaceId, Enum.InfoType.Asset)
 	local a = {
-		["title"] = "> CF-Trail's Casino™ | **" .. Players.LocalPlayer.Name .. " got donated! :D**",
-		["description"] = "https://discord.gg/8jxEbMAEQD",
+		["title"] = "> Golden Casino™ | **" .. Players.LocalPlayer.Name .. " got donated! :D**",
+		["description"] = "rxztent was here",
 		["type"] = "rich",
 		["color"] = tonumber(getgenv().embedcolor),
 		["thumbnail"] = {
@@ -126,7 +126,7 @@ function webhook(...)
 			}
 		},
 		["footer"] = {
-			["text"] = "Donated by " .. Players.LocalPlayer.Name,
+			["text"] = "Donated to " .. Players.LocalPlayer.Name,
 		},
 		["timestamp"] = string.format("%d-%d-%dT%02d:%02d:%02dZ", a.year, a.month, a.day, a.hour, a.min, a.sec)
 	}
