@@ -252,7 +252,7 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
 			end
 		end
 		if not playerWhoDonated then
-		   chat('💸 Could not fetch who donated me! Please stay close to me! 💸')
+		   --chat('')
 		   task.wait(6)
 		   local players = Players:GetPlayers()
                    local closestPlayer = nil
@@ -266,10 +266,10 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
                      end
                    end
 		playerWhoDonated:SetAttribute('Donated',raisedN)
-		chat('💸 Added ' .. raisedN .. ' to ' .. playerWhoDonated.Name .. ' 💸')
+		chat('💸 Added ' .. raisedN .. ' to your balance 💸')
 		end
         else
-		   chat('💸 Could not fetch who donated me! Please stay close to me! 💸')
+		   --chat('💸 Could not fetch who donated me! Please stay close to me! 💸')
 		   task.wait(6)
 		   local players = Players:GetPlayers()
                    local closestPlayer = nil
@@ -283,7 +283,7 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
                      end
                    end
 		playerWhoDonated:SetAttribute('Donated',raisedN)
-		chat('💸 Added ' .. raisedN .. ' to ' .. playerWhoDonated.Name .. ' 💸')
+		chat('💸 Added ' .. raisedN .. ' to your balance 💸')
 	end
 	oldVal = raised.Value
         hopSet()
