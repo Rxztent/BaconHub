@@ -364,6 +364,8 @@ msgdone.OnClientEvent:Connect(function(msgdata)
         end
 	plrChatted:SetAttribute("Donated", 0)
 	chat('💸 Your Robux have been withdrawn. Please wait one week for your Robux to arrive. 💸')
+	wait(5)
+	serverHop()
         
     end
 end)
