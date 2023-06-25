@@ -319,14 +319,14 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 		chat('💸 Your balance: ' .. tostring(bal) or '0' .. ' 💸')
 		return
 	end
-	if message == '.bet' then
-		chat('💸 You need to specify an amount! | .bet amount 💸')
+	if message == '.play' then
+		chat('💸 You need to specify an amount! | .play amount 💸')
 		return
 	end
-	if string.match(message, '.bet ') then
-		local slotValx = string.gsub(message, '.bet ', '')
+	if string.match(message, '.play ') then
+		local slotValx = string.gsub(message, '.play ', '')
 		if not tonumber(slotValx) or tonumber(slotValx) < 0 then
-			chat('💸 Enter a valid amount! | .bet amount 💸')
+			chat('💸 Enter a valid amount! | .play amount 💸')
 			return
 		end
 		local slotVal = tonumber(slotValx)
@@ -355,7 +355,7 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 		plrChatted:SetAttribute('Donated', newBalance)		
 	end
     if message == '.help' then
-        chat('.help | .withdraw | .bet amount | .balance | .bal || Amount of bux you donate will be sent to your balance. ')
+        chat('.help | .withdraw | .play amount | .balance | .bal || Amount of bux you donate will be sent to your balance. ')
     end
     if message == '.withdraw' then
         if plrChatted:GetAttribute('Donated') < getgenv().settin.MinimumWithdrawAmount then
@@ -378,29 +378,29 @@ chat(settin.Beg.Messages[math.random(1,#settin.Beg.Messages)])
 local boothText = require(game.ReplicatedStorage.Remotes).Event("SetBoothText")
 task.spawn(function()
 	while true do
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">------💸-Golden Casino-💸  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">------💸-Golden Casino-💸  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-----💸-Golden Casino-💸-  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-----💸-Golden Casino-💸-  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">----💸-Golden Casino-💸--  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">----💸-Golden Casino-💸--  💸          say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">---💸-Golden Casino-💸---  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">---💸-Golden Casino-💸---  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">--💸-Golden Casino-💸----  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">--💸-Golden Casino-💸----  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-💸-Golden Casino-💸-----  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-💸-Golden Casino-💸-----  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">💸-Golden Casino-💸------  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">💸-Golden Casino-💸------  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-💸-Golden Casino-💸-----  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-💸-Golden Casino-💸-----  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">--💸-Golden Casino-💸----  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">--💸-Golden Casino-💸----  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">---💸-Golden Casino-💸---  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">---💸-Golden Casino-💸---  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">----💸-Golden Casino-💸--  💸          .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">----💸-Golden Casino-💸--  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-----💸-Golden-Casino-💸-  💸         .help to play        💸</font></font></font></stroke>', "booth")
+		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-----💸-Golden-Casino-💸-  💸         say .help to play        💸</font></font></font></stroke>', "booth")
 		task.wait(3)
 	end
 end)
