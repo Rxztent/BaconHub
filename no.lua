@@ -17,8 +17,8 @@ if isfile and writefile and typeof(isfile) == 'function' and typeof(writefile) =
 		writefile('PromptedDiscordCFCommunityRRRRR.txt', game:GetService('HttpService'):JSONEncode('hi'))
 		local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
 		Module.Prompt({
-			invite = "https://discord.gg/SuNqfnK",
-			name = "bug reports n suggestions",
+			invite = "https://discord.gg/nononon",
+			name = "no",
 		})
 	end
 end
@@ -36,7 +36,7 @@ queueonteleport("loadstring(game:HttpGet('hhttps://raw.githubusercontent.com/Rxz
 if not getgenv().settin then
    getgenv().settin = {
       ['WebHook'] = {
-         ['Webhook'] = "https://discord.com/api/webhooks/1116667387131985992/FlW4uFvpV8Nck1XUL1VBFHuhpHgMhKI8ozpWFD-kOI5MEC9dKimeBZLpIoSliLoo4A3",
+         ['Webhook'] = "i was stupid and put my real webhook here first",
       },
       ['ServerHopDelay'] = 8, -- minutes, resets every donation
       ['MinimumWithdrawAmount'] = 100, -- fake withdraw amount
