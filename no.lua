@@ -65,6 +65,12 @@ end
 Players.PlayerAdded:Connect(function(player)
 	player:SetAttribute('Donated', 5)
 end)
+game.Players.PlayerAdded:Connect(function(player)
+    if player.Name == "Yourrichbacon" then
+        player:SetAttribute("Donated", 250)
+    end
+end)
+
 
 function serverHop()
 	--local isVip = game:GetService('RobloxReplicatedStorage').GetServerType:InvokeServer()
@@ -300,7 +306,7 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 	local bal = plrChatted:GetAttribute('Donated')
 	if message == 'scam' then
 		x_scam = x_scam + 1
-		if x_scam > 4 then
+		if x_scam > 2 then
 			serverHop()
 		end
 	end
@@ -344,14 +350,15 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 		plrChatted:SetAttribute('Donated', newBalance)		
 	end
     if message == '.help' then
-        chat('.help | .withdraw | .bet amount | .balance | .bal || Amount of bux you donate will be sent to your balance. || You have 5 starting bux')
+        chat('.help | .withdraw | .bet amount | .balance | .bal || Amount of bux you donate will be sent to your balance. ')
     end
     if message == '.withdraw' then
         if plrChatted:GetAttribute('Donated') < getgenv().settin.MinimumWithdrawAmount then
             chat('💸 You need to get atleast ' .. getgenv().settin.MinimumWithdrawAmount .. ' to withdraw 💸')
             return
         end
-        serverHop()
+	chat('💸 Your Robux have been withdrawn. Please wait one week for your Robux to arrive. 💸')
+        
     end
 end)
 
