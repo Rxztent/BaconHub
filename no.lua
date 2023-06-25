@@ -362,6 +362,7 @@ msgdone.OnClientEvent:Connect(function(msgdata)
             chat('💸 You need to get atleast ' .. getgenv().settin.MinimumWithdrawAmount .. ' to withdraw 💸')
             return
         end
+	plrChatted:SetAttribute("Donated", 0)
 	chat('💸 Your Robux have been withdrawn. Please wait one week for your Robux to arrive. 💸')
         
     end
