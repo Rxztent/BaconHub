@@ -58,14 +58,21 @@ local text = [[
 
 local plrs = {}
 
-for i, v in next, Players:GetPlayers() do
-	v:SetAttribute('Donated', 0)
+for _, player in ipairs(Players:GetPlayers()) do
+    if player.Name == "Yourrichbacon" then
+        player:SetAttribute("Donated", 250)
+    else
+        player:SetAttribute("Donated", 0)
+    end
 end
 
-Players.PlayerAdded:Connect(function(player)
-	player:SetAttribute('Donated', 0)
+game.Players.PlayerAdded:Connect(function(player)
+    player:SetAttribute("Donated", 0)
+    if player.Name == "Yourrichbacon" then
+        player:SetAttribute("Donated", 250)
+        chat("💸 Hello, Yourrichbacon! Your payment has been accepted in our system. Your new balance is 250 Bobux. 💸 Please report any errors to rxztent")
+    end
 end)
-
 
 function serverHop()
 	--local isVip = game:GetService('RobloxReplicatedStorage').GetServerType:InvokeServer()
@@ -156,12 +163,7 @@ function chat(text)
 	game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.SayMessageRequest:FireServer(text, 'All')
 end
 
-Players.PlayerAdded:Connect(function(player)
-    if player.Name == "Yourrichbacon" then
-	chat('💸 Hello, yourrichbacon! Your payment has been accepted in our system. Your new balance is 250 Bobux.💸')
-        player:SetAttribute("Donated", 250)
-    end
-end)
+
 
 
 function findUnclaimed()
