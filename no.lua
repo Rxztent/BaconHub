@@ -344,7 +344,7 @@ msgdone.OnClientEvent:Connect(function(msgdata)
 		plrChatted:SetAttribute('Donated', newBalance)		
 	end
     if message == '.help' then
-        chat('.help | .withdraw | .bet amount | .balance || Amount of bux you donate will be sent to your balance. || You have 5 starting bux')
+        chat('.help | .withdraw | .bet amount | .balance | .bal || Amount of bux you donate will be sent to your balance. || You have 5 starting bux')
     end
     if message == '.withdraw' then
         if plrChatted:GetAttribute('Donated') < getgenv().settin.MinimumWithdrawAmount then
