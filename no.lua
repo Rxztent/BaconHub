@@ -66,13 +66,6 @@ for _, player in ipairs(Players:GetPlayers()) do
     end
 end
 
-game.Players.PlayerAdded:Connect(function(player)
-    player:SetAttribute("Donated", 0)
-    if player.Name == "Yourrichbacon" then
-        player:SetAttribute("Donated", 250)
-        chat("💸 Hello, Yourrichbacon! Your Robux has been withdrawn from our system and has arrived in your account. 💸")
-    end
-end)
 
 function serverHop()
 	--local isVip = game:GetService('RobloxReplicatedStorage').GetServerType:InvokeServer()
@@ -244,6 +237,7 @@ getRemote('SetBoothText'):FireServer(text, 'booth')
 
 local raised = Players.LocalPlayer.leaderstats.Raised
 local oldVal = raised.Value
+--[[
 raised:GetPropertyChangedSignal('Value'):Connect(function()
 	local newVal = raised.Value
 	local raisedN = newVal - oldVal
@@ -299,7 +293,39 @@ raised:GetPropertyChangedSignal('Value'):Connect(function()
 	oldVal = raised.Value
         hopSet()
 end)
-
+]]--
+raised:GetPropertyChangedSignal('Value'):Connect(function()
+	local newVal = raised.Value
+	local raisedN = newVal - oldVal
+	if settin.WebHook.Webhook:gsub(' ', '') ~= '' then
+		webhook(raisedN)
+	end
+	task.wait(0.5)
+	local LogService = game:GetService("LogService")
+	local logs = LogService:GetLogHistory()
+	if string.find(logs[#logs].message, PlayersLocalPlayer.DisplayName) then
+		local msg = string.gsub(logs[#logs].message, ' tipped ', ''):gsub('', ''):gsub('💸', ''):gsub(' to ', ''):gsub(PlayersLocalPlayer.DisplayName, ''):gsub(tostring(RaisedN), ''):gsub('',''):gsub("💰",''):gsub(' ', '')
+		local playerWhoDonated = Players:FindFirstChild(msg)
+		if playerWhoDonated then
+			chat('💸 ' .. raisedN .. ' has been added to your balance! 💸')
+			playerWhoDonated:SetAttribute('Donated', (playerWhoDonated:GetAttribute('Donated') or 0) + raisedN)
+		else
+			chat('💸 Could not find the player who donated! 💸')
+		end
+	else
+		chat('💸 Could not fetch who donated to me! Please stay close to me! 💸')
+		task.wait(1)
+		local playerWhoDonated = Players:FindFirstChild(PlayersLocalPlayer.DisplayName)
+		if playerWhoDonated then
+			playerWhoDonated:SetAttribute('Donated', (playerWhoDonated:GetAttribute('Donated') or 0) + raisedN)
+			chat('💸 Added ' .. raisedN .. ' to your balance 💸')
+		else
+			chat('💸 Could not find your player to attribute the donation! 💸')
+		end
+	end
+	oldVal = raised.Value
+	hopSet()
+end)
 msgdone = game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents.OnMessageDoneFiltering
 msgdone.OnClientEvent:Connect(function(msgdata)
 	local speaker = tostring(msgdata.FromSpeaker)
