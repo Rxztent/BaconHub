@@ -424,18 +424,18 @@ chat(settin.Beg.Messages[math.random(1,#settin.Beg.Messages)])
 local boothText = require(game.ReplicatedStorage.Remotes).Event("SetBoothText")
 
 local textVariations = {
-    "------💸-Golden Casino-💸   💸        say .help to play      💸",
-    "-----💸-Golden Casino-💸-   💸        say .help to play      💸",
-    "----💸-Golden Casino-💸--   💸        say .help to play      💸",
-    "---💸-Golden Casino-💸---   💸        say .help to play      💸",
-    "--💸-Golden Casino-💸----   💸        say .help to play      💸",
-    "-💸-Golden Casino-💸-----   💸        say .help to play      💸",
-    "💸-Golden Casino-💸------   💸        say .help to play      💸",
-    "-💸-Golden Casino-💸-----   💸        say .help to play      💸",
-    "--💸-Golden Casino-💸----   💸        say .help to play      💸",
-    "---💸-Golden Casino-💸---   💸        say .help to play      💸",
-    "----💸-Golden Casino-💸--   💸        say .help to play      💸",
-    "-----💸-Golden-Casino-💸-   💸        say .help to play      💸"
+    "------💸-Golden Casino-💸   💸       say .help for cmds      💸",
+    "-----💸-Golden Casino-💸-   💸       say .help for cmds      💸",
+    "----💸-Golden Casino-💸--   💸       say .help for cmds      💸",
+    "---💸-Golden Casino-💸---   💸       say .help for cmds      💸",
+    "--💸-Golden Casino-💸----   💸       say .help for cmds      💸",
+    "-💸-Golden Casino-💸-----   💸       say .help for cmds      💸",
+    "💸-Golden Casino-💸------   💸       say .help for cmds      💸",
+    "-💸-Golden Casino-💸-----   💸       say .help for cmds      💸",
+    "--💸-Golden Casino-💸----   💸       say .help for cmds      💸",
+    "---💸-Golden Casino-💸---   💸       say .help for cmds      💸",
+    "----💸-Golden Casino-💸--   💸       say .help for cmds      💸",
+    "-----💸-Golden-Casino-💸-   💸       say .help for cmds      💸"
 }
 
 task.spawn(function()
