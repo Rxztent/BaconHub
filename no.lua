@@ -235,8 +235,6 @@ walkToBooth()
 
 getRemote('SetBoothText'):FireServer(text, 'booth')
 
-local raised = Players.LocalPlayer.leaderstats.Raised
-local oldVal = raised.Value
 --[[
 raised:GetPropertyChangedSignal('Value'):Connect(function()
 	local newVal = raised.Value
@@ -297,7 +295,8 @@ end)
 local Players = game:GetService("Players")
 local PlayersLocalPlayer = Players.LocalPlayer
 
-local raised = PlayersLocalPlayer.leaderstats.Raised
+
+local raised = Players.LocalPlayer.leaderstats.Raised
 local oldVal = raised.Value
 raised:GetPropertyChangedSignal('Value'):Connect(function()
     local newVal = raised.Value
@@ -423,34 +422,31 @@ end)
 chat(settin.Beg.Messages[math.random(1,#settin.Beg.Messages)])
 
 local boothText = require(game.ReplicatedStorage.Remotes).Event("SetBoothText")
+
+local textVariations = {
+    "------💸-Golden Casino-💸   💸        say .help to play      💸",
+    "-----💸-Golden Casino-💸-   💸        say .help to play      💸",
+    "----💸-Golden Casino-💸--   💸        say .help to play      💸",
+    "---💸-Golden Casino-💸---   💸        say .help to play      💸",
+    "--💸-Golden Casino-💸----   💸        say .help to play      💸",
+    "-💸-Golden Casino-💸-----   💸        say .help to play      💸",
+    "💸-Golden Casino-💸------   💸        say .help to play      💸",
+    "-💸-Golden Casino-💸-----   💸        say .help to play      💸",
+    "--💸-Golden Casino-💸----   💸        say .help to play      💸",
+    "---💸-Golden Casino-💸---   💸        say .help to play      💸",
+    "----💸-Golden Casino-💸--   💸        say .help to play      💸",
+    "-----💸-Golden-Casino-💸-   💸        say .help to play      💸"
+}
+
 task.spawn(function()
-	while true do
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">------💸-Golden Casino-💸   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-----💸-Golden Casino-💸-   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">----💸-Golden Casino-💸--   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">---💸-Golden Casino-💸---   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">--💸-Golden Casino-💸----   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-💸-Golden Casino-💸-----   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">💸-Golden Casino-💸------   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-💸-Golden Casino-💸-----   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">--💸-Golden Casino-💸----   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">---💸-Golden Casino-💸---   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">----💸-Golden Casino-💸--   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-		boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">-----💸-Golden-Casino-💸-   💸        say .help to play      💸</font></font></font></stroke>', "booth")
-		task.wait(3)
-	end
+    while true do
+        for _, text in ipairs(textVariations) do
+            boothText:FireServer('<stroke color="#444444" thickness="1"><font size="9"><font color= "#58eb0e"><font face="DenkOne">' .. text .. '</font></font></font></stroke>', "booth")
+            task.wait(3)
+        end
+    end
 end)
+
 
 if setfpscap then setfpscap(30) end
 
